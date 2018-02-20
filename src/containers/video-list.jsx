@@ -2,14 +2,19 @@ import React from 'react'
 
 import VideoListItemp from '../components/video-list-item'
 
-const VideoList = () => {
-  const movies = ['film1', 'film2', 'film3']
+const VideoList = (props) => {
+  const {movieList} = props
+
+  function receiveCallBack (movie) {
+    props.callback(movie)
+  }
+
   return (
     <div>
       <ul>
         {
-          movies.map(movie => {
-            return <VideoListItemp key={movie} movie={movie} />
+          movieList.map(movie => {
+            return <VideoListItemp key={movie.id} movie={movie} callback={receiveCallBack} />
           })
         }
       </ul>

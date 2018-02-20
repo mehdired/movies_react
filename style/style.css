@@ -1,0 +1,14 @@
+.search-bar {
+  margin: 50px 0 30px
+}
+
+li {cursor: pointer}
+
+li:hover {
+  background-color: #E0E0E0
+}
+
+.media_title_item {
+  padding-top: 40px;
+  text-align: center;
+}
